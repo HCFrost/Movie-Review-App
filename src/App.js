@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import MovieList from './components/MovieList'
 
-function App() {
+
+const App = () =>{
   return (
-    
-  );
+      <div>
+         <MovieList /> 
+      </div>
+      
+    )
 }
 
-export default App;
+export default App
