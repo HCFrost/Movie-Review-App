@@ -6,7 +6,7 @@ import {FaStar }from "react-icons/fa";
 const Review = (props) => { 
     const { review } = props
     const {username,date,rating,content,id} = review
-    
+    console.log(review)
         return(
             <div  className="card mt-4">
                 <div className="card-header bg-success">

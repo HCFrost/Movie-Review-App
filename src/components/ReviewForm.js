@@ -15,11 +15,10 @@ const ReviewForm = (props) => {
     const handleChange = ( e ) => {
         e.preventDefault();
         setReview({
-            
+            ...review,
             [e.target.name]:e.target.value
         });
     } 
-    console.log(props)
     const handleSubmit = e => {
         e.preventDefault();
         props.addReview(
@@ -27,6 +26,9 @@ const ReviewForm = (props) => {
         );
         setId((id)=>id +1)
         setRating(0)
+        setReview({
+            review
+        })
     } 
     return(
         <div className="card p-4">
@@ -84,28 +86,4 @@ const ReviewForm = (props) => {
         </div>
     );
     } 
-    
-    
 export default ReviewForm
-    
-    // const handleChange = (event) => {
-    //     this.setState({
-    //         username:event.target.username,
-    //         date:event.target.date,
-    //         rating:event.target.rating,
-    //         content:event.target.content,
-            
-    //     })
-    //     event.preventDefault()
-    // }
-
-    // const handleSubmit=(event)=>{
-    //      this.state.reviews.push(this.state)
-    //     event.preventDefault()
-    //    }
-
-    
-   
-        
-        
-    // }

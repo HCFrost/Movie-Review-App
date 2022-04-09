@@ -11,7 +11,7 @@ const Movie = (props) => {
 		setReviews([...reviews,review]);
 	} 
   const HandleDeleteItem = (e) => {
-    
+    console.log(props)
   }
 	const DisplayReviews = reviews.map( 
 		(review,id) => {
@@ -32,7 +32,7 @@ const Movie = (props) => {
       <div className="card-footer container">
         <ReviewForm addReview={addReview}/>
 				{DisplayReviews}
-        {console.log(reviews)}
+        {console.log({reviews})}
       </div>
     </div>)
     
